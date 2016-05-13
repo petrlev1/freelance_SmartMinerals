@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+  a:hover {
+    color: #000;
+    text-decoration: none; }
+
+.allcont {
+  position: relative;
+  text-align: center;
+  min-width: 50px;
+  max-width: 640px;
+  min-height: 569px; }
+
+.content {
+  padding: 5px 20px; }
+
+.head {
+  position: relative;
+  display: block;
+  padding: 5px 20px;
+  text-align: left;
+  border-bottom: 2px #2cb0b4 solid; }
+
+.head_tit {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  color: #8d6f4b; }
+
+.logo {
+  position: absolute;
+  bottom: 6px; }
+
+.formscont {
+  background-color: #eff4f7;
+  padding: 5px; }
+
+.form1 {
+  border-radius: 0; }
+
+.bottom1 {
+  display: block;
+  color: #665036;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  border: solid 1px #1b9498;
+  background-image: -webkit-linear-gradient(bottom, #2cb0b4, #3bc3c7);
+  background-image: -moz-linear-gradient(bottom, #2cb0b4, #3bc3c7);
+  background-image: -o-linear-gradient(bottom, #2cb0b4, #3bc3c7);
+  background-image: -ms-linear-gradient(bottom, #2cb0b4, #3bc3c7);
+  background-image: linear-gradient(to top, #2cb0b4, #3bc3c7); }
+
+.bottom2 {
+  display: block;
+  color: #717881;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 1, 0.15);
+  border: solid 1px #9eb9c2;
+  background-image: -webkit-linear-gradient(bottom, #cee5ef, #ecf5f8);
+  background-image: -moz-linear-gradient(bottom, #cee5ef, #ecf5f8);
+  background-image: -o-linear-gradient(bottom, #cee5ef, #ecf5f8);
+  background-image: -ms-linear-gradient(bottom, #cee5ef, #ecf5f8);
+  background-image: linear-gradient(to top, #cee5ef, #ecf5f8); }
+
+.text1 {
+  font-size: 18px;
+  color: #8d6f4b; }
+
+.icons {
+  display: table;
+  width: 100%; }
+  .icons ul {
+    display: table-row; }
+  .icons li {
+    display: table-cell; }
+
+.icons1, .ic_calendar, .ic_vcard2, .ic_watch, .ic_dollar {
+  display: inline-block;
+  width: 73px;
+  height: 50px;
+  text-align: center;
+  line-height: 13px;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 0 0 0; }
+
+.ic_calendar {
+  background-image: url(img/ic_calendar.png); }
+
+.ic_vcard2 {
+  background-image: url(img/ic_vcard2.png); }
+
+.ic_watch {
+  background-image: url(img/ic_watch.png); }
+
+.ic_dollar {
+  background-image: url(img/ic_dollar.png); }
+
+/*# sourceMappingURL=style.css.map */
