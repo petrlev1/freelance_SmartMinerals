@@ -44,7 +44,11 @@ a {
 
 .logo {
   position: absolute;
+<<<<<<< HEAD
   bottom: 2px;
+=======
+  bottom: 6px;
+>>>>>>> 6cf3d1f679d68e888f0e4e1aac87b1a281aafb5c
   left: 3%; }
 
 .formscont {
