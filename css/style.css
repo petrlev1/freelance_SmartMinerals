@@ -83,7 +83,8 @@ a {
   .icons ul {
     display: table-row; }
   .icons li {
-    display: table-cell; }
+    display: table-cell;
+    text-align: center; }
 
 .icons1, .ic_calendar, .ic_vcard2, .ic_watch, .ic_dollar {
   display: inline-block;
