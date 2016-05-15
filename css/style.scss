@@ -1,7 +1,9 @@
 body { font-family: Arial, Helvetica, sans-serif; color: #666; }
 
 a {color: #666; text-decoration: none;
-    &:hover{color: #000; text-decoration: none;}}
+    &:hover{color: #000; text-decoration: none;}
+&:active{color: #000; text-decoration: none;}
+&:focus{color: #000; text-decoration: none;}}
 
 .head { position: relative; display: block; padding: 5px 20px; text-align: left; border-bottom: 2px #2cb0b4 solid; }
 
@@ -50,12 +52,35 @@ font-size: 18px; padding: 8px;
 
 .icons { display: table; width: 100%;
     ul{display: table-row}
-    li{display: table-cell; text-align: center;}}
+    li{ position: relative; display: table-cell; text-align: center;
+    }}
 
 .icons1 { display: inline-block; width: 73px; height: 50px; text-align: center; line-height: 13px; font-size: 12px; background-repeat: no-repeat; background-position: center; padding: 60px 0 0 0; }
 
-.ic_calendar { @extend .icons1; background-image: url(img/ic_calendar.png); }
-.ic_vcard2 { @extend .icons1; background-image: url(img/ic_vcard2.png); }
-.ic_watch { @extend .icons1; background-image: url(img/ic_watch.png); }
-.ic_dollar { @extend .icons1; background-image: url(img/ic_dollar.png); }
+.ic_calendar { @extend .icons1; background-image: url(img/ic_calendar.png);
+        &:focus .modal_rectangle {display: block;}
+        &:focus ~ .p_ic_calendar {display: block;}
+}
+.ic_vcard2 { @extend .icons1; background-image: url(img/ic_vcard2.png);
+&:focus .modal_rectangle {display: block;}
+        &:focus ~ .p_ic_vcard2 {display: block;}}
+.ic_watch { @extend .icons1; background-image: url(img/ic_watch.png);
+&:focus .modal_rectangle {display: block;}
+        &:focus ~ .p_ic_watch {display: block;}}
+.ic_dollar { @extend .icons1; background-image: url(img/ic_dollar.png);
+&:focus .modal_rectangle {display: block;}
+        &:focus ~ .p_ic_dollar {display: block;}}
+
+.p_icons { position: absolute; width: 244px; background-color: #2cb0b4; padding: 5px 10px; color: #fff; bottom: 85px; text-align: left;}
+
+.modal_rectangle { display: none; position: absolute; top: -8px; left: 0; right: 0; margin: auto; width: 14px; height: 16px; background: url(img/modal_rectangle.png) no-repeat;}
+
+.p_ic_calendar { @extend .p_icons; left: 27%; display: none;}
+.p_ic_vcard2 { @extend .p_icons; left: -45%; display: none;}
+.p_ic_watch { @extend .p_icons; right: -40%; display: none;}
+.p_ic_dollar { @extend .p_icons; right: 4%; display: none;}
+
+
+
+
 

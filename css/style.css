@@ -8,6 +8,12 @@ a {
   a:hover {
     color: #000;
     text-decoration: none; }
+  a:active {
+    color: #000;
+    text-decoration: none; }
+  a:focus {
+    color: #000;
+    text-decoration: none; }
 
 .head {
   position: relative;
@@ -92,6 +98,7 @@ a {
   .icons ul {
     display: table-row; }
   .icons li {
+    position: relative;
     display: table-cell;
     text-align: center; }
 
@@ -108,14 +115,66 @@ a {
 
 .ic_calendar {
   background-image: url(img/ic_calendar.png); }
+  .ic_calendar:focus .modal_rectangle {
+    display: block; }
+  .ic_calendar:focus ~ .p_ic_calendar {
+    display: block; }
 
 .ic_vcard2 {
   background-image: url(img/ic_vcard2.png); }
+  .ic_vcard2:focus .modal_rectangle {
+    display: block; }
+  .ic_vcard2:focus ~ .p_ic_vcard2 {
+    display: block; }
 
 .ic_watch {
   background-image: url(img/ic_watch.png); }
+  .ic_watch:focus .modal_rectangle {
+    display: block; }
+  .ic_watch:focus ~ .p_ic_watch {
+    display: block; }
 
 .ic_dollar {
   background-image: url(img/ic_dollar.png); }
+  .ic_dollar:focus .modal_rectangle {
+    display: block; }
+  .ic_dollar:focus ~ .p_ic_dollar {
+    display: block; }
+
+.p_icons, .p_ic_calendar, .p_ic_vcard2, .p_ic_watch, .p_ic_dollar {
+  position: absolute;
+  width: 244px;
+  background-color: #2cb0b4;
+  padding: 5px 10px;
+  color: #fff;
+  bottom: 85px;
+  text-align: left; }
+
+.modal_rectangle {
+  display: none;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 14px;
+  height: 16px;
+  background: url(img/modal_rectangle.png) no-repeat; }
+
+.p_ic_calendar {
+  left: 27%;
+  display: none; }
+
+.p_ic_vcard2 {
+  left: -45%;
+  display: none; }
+
+.p_ic_watch {
+  right: -40%;
+  display: none; }
+
+.p_ic_dollar {
+  right: 4%;
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
