@@ -7,7 +7,7 @@ a {color: #666; text-decoration: none;
 
 .head { position: relative; display: block; padding: 5px 20px; text-align: left; border-bottom: 2px #2cb0b4 solid; }
 
-.allcont { position: relative; text-align: center; min-width: 50px; max-width: 640px; min-height: 569px; left: 0; right: 0; margin: auto; padding: 25px 0 0 0; }
+.allcont { position: relative; text-align: center; min-width: 50px; max-width: 640px; min-height: 410px; left: 0; right: 0; margin: auto; padding: 25px 0 0 0; }
 
 .headcont { @extend .allcont; min-height: 0; padding: 0; }
 
@@ -50,7 +50,9 @@ font-size: 18px; padding: 8px;
 
 .text1 {font-size: 18px; color: #8d6f4b;}
 
-.icons { display: table; width: 100%;
+.foot1 {position:fixed; bottom:45px; left:0; right: 0; margin: auto; width: 100%; max-width: 640px;}
+
+.icons { display: table; width: 98%;
     ul{display: table-row}
     li{ position: relative; display: table-cell; text-align: center;
     }}
@@ -75,10 +77,21 @@ font-size: 18px; padding: 8px;
 
 .modal_rectangle { display: none; position: absolute; top: -8px; left: 0; right: 0; margin: auto; width: 14px; height: 16px; background: url(img/modal_rectangle.png) no-repeat;}
 
-.p_ic_calendar { @extend .p_icons; left: 27%; display: none;}
+.p_ic_calendar { @extend .p_icons; left: 27%; display: none; }
 .p_ic_vcard2 { @extend .p_icons; left: -45%; display: none;}
 .p_ic_watch { @extend .p_icons; right: -40%; display: none;}
 .p_ic_dollar { @extend .p_icons; right: 4%; display: none;}
+
+
+
+
+
+
+@media (max-height: 455px) {
+
+.foot1 {position:absolute;}
+    
+}
 
 
 

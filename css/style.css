@@ -27,7 +27,7 @@ a {
   text-align: center;
   min-width: 50px;
   max-width: 640px;
-  min-height: 569px;
+  min-height: 410px;
   left: 0;
   right: 0;
   margin: auto;
@@ -92,9 +92,18 @@ a {
   font-size: 18px;
   color: #8d6f4b; }
 
+.foot1 {
+  position: fixed;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 640px; }
+
 .icons {
   display: table;
-  width: 100%; }
+  width: 98%; }
   .icons ul {
     display: table-row; }
   .icons li {
@@ -176,5 +185,9 @@ a {
 .p_ic_dollar {
   right: 4%;
   display: none; }
+
+@media (max-height: 455px) {
+  .foot1 {
+    position: absolute; } }
 
 /*# sourceMappingURL=style.css.map */
