@@ -1,5 +1,6 @@
 body { font-family: Arial, Helvetica, sans-serif; color: #666; width: 100%;
-  height: 100%; }
+  height: 100%;
+margin: 0; padding: 0;}
 
 a {color: #666; text-decoration: none;
     &:hover{color: #000; text-decoration: none;}
@@ -12,18 +13,20 @@ a {color: #666; text-decoration: none;
 
 .headcont { @extend .allcont; min-height: 0; padding: 0; }
 
-.content {padding: 5px 20px;}
+.content {padding: 5px 10px;}
 
 .head_tit { display: block; width: 100%; text-align: center;
 font-size: 18px; padding: 8px; color: #8d6f4b; }
 
-.logo {position: absolute; bottom: 2px; left: 3%; }
+h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
+
+.logo {position: absolute; bottom: 2px; left: 0; }
 
 .formscont {background-color: #eff4f7; padding: 5px;}
 
 .form1 {border-radius: 0;}
 
-.bottom1 { display: block; color: #665036; border-radius: 0;
+.bottom1 { display: inline-block; padding: 10px 50px; color: #665036; border-radius: 0;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,1,.15);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,1,.15);
 	box-shadow: 0 1px 2px rgba(0,0,1,.15);
@@ -35,7 +38,7 @@ font-size: 18px; padding: 8px; color: #8d6f4b; }
 	background-image: linear-gradient(to top, #2cb0b4, #3bc3c7);
 }
 
-.bottom2 { display: block;  color: #717881; border-radius: 0;
+.bottom2 { display: inline-block; padding: 10px 20px; color: #717881; border-radius: 0;
     
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,1,.15);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,1,.15);
@@ -49,6 +52,7 @@ font-size: 18px; padding: 8px; color: #8d6f4b; }
 }
 
 .text1 {font-size: 18px; color: #8d6f4b;}
+.text2 {font-size: 14px; color: #666;}
 
 .foot1 {position:fixed; bottom:45px; left:0; right: 0; margin: auto; width: 100%; max-width: 640px;}
 
@@ -81,6 +85,99 @@ font-size: 18px; padding: 8px; color: #8d6f4b; }
 .p_ic_vcard2 { @extend .p_icons; left: -45%; display: none;}
 .p_ic_watch { @extend .p_icons; right: -40%; display: none;}
 .p_ic_dollar { @extend .p_icons; right: 4%; display: none;}
+
+.marbot1 {margin-bottom:10px;}
+
+.link1 {font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #8d6f4b;}
+
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+
+.calendar { background-color: #fff;}
+
+.cal_head {display: table; width: 100%; background-color: #2cb0b4;
+    ul{display:table-row}
+    li{display:table-cell; vertical-align: middle;}}
+.cal_date { position: relative; left: 0; right: 0; margin: 5px auto 5px auto; width: 130px; text-align: left;}
+.cal_date2 {position: absolute; right: 0; top: 0;}
+.cal_day { font-size: 40px; color: #fff; line-height: 40px; }
+.cal_week { font-size: 18px; color: #fff; line-height: 20px; margin-top: 2px;}
+.cal_me { font-size: 12px; color: #665036;}
+.cal_arrow {color: #fff; font-size: 40px; padding: 5px 12px; line-height: 20px;}
+
+.cal_body {display: table; width: 100%; border-collapse: collapse; border-top: 2px #2cb0b4 solid;
+    ul{display:table-row; }
+    li{display:table-cell; vertical-align: middle; border: 1px #c4c4c4 solid; width: 14%;}}
+.cal_body1 { color: #fff; font-size: 14px; background-color: #8d6f4b;}
+.cal_body2 { font-size: 14px; color: #666666; position: relative;
+    a{ position: relative; display: block; width: 21px; height: 21px; left: 0; right: 0; margin: 2px auto;}}
+.cal_body3 { font-size: 10px; color: #010101; line-height: 9px; padding: 1px 0;}
+
+.cal_active { background-color: #2cb0b4; border-radius: 50% / 50%;}
+
+.date1 { font-size: 16px; color: #fff; background-color: #2cb0b4; padding: 7px;}
+
+
+
+.table1 { display: table; width: 100%; border-collapse: collapse; background-color: #fff;
+    ul{display:table-row;}
+        li{display:table-cell; padding: 5px; border: 1px #c4c4c4 solid;}
+}
+
+.table1_fio {font-size: 14px; text-align: left; color: #666; line-height: 17px;}
+.fio2 { @extend .table1_fio; color: #bfbfbf;}
+.table1_tel {font-size: 12px; text-align: left; color: #666; margin: 3px 0 3px 0;}
+.table1_date {font-size: 10px; text-align: left; color: #212122;}
+
+.vertical_align_top {vertical-align: top;}
+
+
+
+.but { display: block; width: 22px; height: 22px; background-repeat: no-repeat; left: 0; right: 0; margin: auto;}
+
+.but_del { @extend .but; background-image: url(img/ic_del.png);}
+.but_pause { @extend .but; background-image: url(img/ic_pause.png);}
+
+
+
+.client_card { display: table; width: 100%;
+    ul{display:table-row; }
+    li{display:table-cell; vertical-align:top; padding: 3px;}
+}
+
+.cc2 { display: table;
+    ul{display:table-row; }
+    li{display:table-cell; text-align: top left; padding: 5px;}
+}
+
+.line1 { height: 1px; background-color: #c4c4c4;}
+
+
+.table2 {display: table; width: 100%; font-size: 14px; border-collapse: collapse;
+    ul{display:table-row; }
+    li{display:table-cell; vertical-align:top; padding: 5px 8px 5px 8px; text-align: left; border: 1px #c4c4c4 solid;}}
+.table2_head { color: #fff; background-color: #8d6f4b;}
+
+.table2_t1 { position: relative; font-size: 14px; color: #666; }
+
+.ic_sapis {background: url(img/ic_zapis.png) left no-repeat; padding: 10px 28px; margin-left: 10px;}
+
+.table3 { @extend .table2; 
+    li {border: 1px #fff solid;} }
+
+
+.ic_voskl { float: right; display: inline-block; width: 19px; height: 19px; background: url(img/ic_voskl.png) no-repeat;}
+
+
+
 
 
 
@@ -135,24 +232,6 @@ font-size: 18px; padding: 8px; color: #8d6f4b; }
 
 
 
-
-
-
-/* Список клиентов */
-
-.table1 { display: table; width: 100%; border-collapse: collapse;
-    ul{display:table-row;}
-        li{display:table-cell; padding: 5px; border: 1px #c4c4c4 solid;}
-}
-
-.table1_fio {font-size: 14px; text-align: left; color: #666; line-height: 17px;}
-.table1_tel {font-size: 12px; text-align: left; color: #666; margin: 3px 0 3px 0;}
-.table1_date {font-size: 10px; text-align: left; color: #212122;}
-
-.vertical_align_top {vertical-align: top;}
-
-
-/* /Список клиентов */
 
 
 
