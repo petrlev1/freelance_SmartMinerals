@@ -28,23 +28,24 @@
                 <input type="text" class="form-control form1 marbot1" placeholder="E-mail" >
                 <input type="text" class="form-control form1 marbot1" placeholder="Пароль" >
                 <input type="text" class="form-control form1 marbot1" placeholder="Повторите пароль" >
-                
-                <input list="browsers1" name="browser1" class="form-control form1 unstyled1" placeholder="Выберите что-нибудь">
-  <datalist id="browsers1">
-      <option>Кот</option>
-  <option>Собака</option>
-  <option>Хомяк</option>
-  <option>Черепаха</option>
-  </datalist>
+
+                <select class="form-control form1">
+    <option selected disabled>Выберите что-нибудь</option>
+    <option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+   </select>
 
                 </div>
-            <div style="text-align:left; margin: 15px 0;"><a href="#" class="link1" style="text-align:left;">Загрузить фотографию</a></div>
+            <div style="text-align:left; margin: 15px 0;"><input type="file" id="openfile" class="inputfile" /><label for="openfile" class="link1" style="text-align:left; cursor:pointer;">Загрузить фотографию</label></div>
             <div style="text-align:left; margin-bottom:25px;" class="checkbox"><label><input type="checkbox">Принимаю условия</label></div>
         <a href="#" class="btn bottom1" style="margin:11px 0;">Регистрация</a>
 
                 </div>
 
            </div>
+
 
     
 </body>
