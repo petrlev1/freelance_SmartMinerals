@@ -100,6 +100,8 @@ h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
 }
 
 
+.link2 { color: #2cb0b4;}
+
 
 .calendar { background-color: #fff;}
 
@@ -173,10 +175,43 @@ h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
 .table3 { @extend .table2; 
     li {border: 1px #fff solid;} }
 
+.table_stat { display: table; width: 100%;
+    ul{display:table-row;}
+    li{display:table-cell}}
 
-.ic_voskl { float: right; display: inline-block; width: 19px; height: 19px; background: url(img/ic_voskl.png) no-repeat;}
+
+.table_cle { display: table;
+    ul{display:table-row; }
+    li{display:table-cell; vertical-align: middle;}}
+
+.formstat {width: 98%;}
+
+
+.ic_voskl { display: block; width: 19px; height: 19px; background: url(img/ic_voskl.png) no-repeat;}
 
 #openfile {display: none;}
+
+
+.table_zapis { display: table; border-collapse: collapse; width: 100%;
+    ul{display:table-row; }
+    li{display:table-cell; vertical-align: middle; text-align: center; border: 1px #c4c4c4 solid; padding: 3px 3px; background-color: #fff;}
+}
+
+
+.chek_on {position: relative; display: block; width: 45px; height: 29px; border-radius: 30px; background-color: #2cb0b4; border: 1px #2cb0b4 solid;
+    span{position: absolute; display: block; width:25px; height: 25px; background-color: #8d6f4b; border-radius: 50% / 50%; top: 0; bottom: 0; margin: auto; right: 1px; transition: all 0.2s ease 0s;}}
+
+.chek_off { @extend .chek_on; background-color: #eff4f7; border-color: #8d6f4b;
+span{ right: 17px; transition: all 0.2s ease 0s;}}
+
+.checkbox1 {display: none;}
+
+.checkbox1[type="checkbox"]:checked ~ .chek_on {background-color: #eff4f7; border-color: #8d6f4b;
+span{ right: 17px; transition: all 0.2s ease 0s;}}
+
+.checkbox1[type="checkbox"]:checked ~ .chek_off {background-color: #2cb0b4; border: 1px #2cb0b4 solid;
+span{ right: 1px; transition: all 0.2s ease 0s;}}
+
 
 
 
@@ -235,8 +270,15 @@ h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
 
 
 
+@media (max-width: 600px) {
 
-
+.table_stat { display: table; width: 100%;
+    ul{display:table-row; }
+    li{display:block;}}
+    
+    .formstat {width: 100%;}
+    
+}
 
 
 

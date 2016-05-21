@@ -216,6 +216,9 @@ h2 {
   display: none;
   -webkit-appearance: none; }
 
+.link2 {
+  color: #2cb0b4; }
+
 .calendar {
   background-color: #fff; }
 
@@ -414,15 +417,92 @@ h2 {
 .table3 li {
   border: 1px #fff solid; }
 
+.table_stat {
+  display: table;
+  width: 100%; }
+  .table_stat ul {
+    display: table-row; }
+  .table_stat li {
+    display: table-cell; }
+
+.table_cle {
+  display: table; }
+  .table_cle ul {
+    display: table-row; }
+  .table_cle li {
+    display: table-cell;
+    vertical-align: middle; }
+
+.formstat {
+  width: 98%; }
+
 .ic_voskl {
-  float: right;
-  display: inline-block;
+  display: block;
   width: 19px;
   height: 19px;
   background: url(img/ic_voskl.png) no-repeat; }
 
 #openfile {
   display: none; }
+
+.table_zapis {
+  display: table;
+  border-collapse: collapse;
+  width: 100%; }
+  .table_zapis ul {
+    display: table-row; }
+  .table_zapis li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px #c4c4c4 solid;
+    padding: 3px 3px;
+    background-color: #fff; }
+
+.chek_on, .chek_off {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 29px;
+  border-radius: 30px;
+  background-color: #2cb0b4;
+  border: 1px #2cb0b4 solid; }
+  .chek_on span, .chek_off span {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #8d6f4b;
+    border-radius: 50% / 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 1px;
+    transition: all 0.2s ease 0s; }
+
+.chek_off {
+  background-color: #eff4f7;
+  border-color: #8d6f4b; }
+  .chek_off span {
+    right: 17px;
+    transition: all 0.2s ease 0s; }
+
+.checkbox1 {
+  display: none; }
+
+.checkbox1[type="checkbox"]:checked ~ .chek_on, .checkbox1[type="checkbox"]:checked ~ .chek_off {
+  background-color: #eff4f7;
+  border-color: #8d6f4b; }
+  .checkbox1[type="checkbox"]:checked ~ .chek_on span, .checkbox1[type="checkbox"]:checked ~ .chek_off span {
+    right: 17px;
+    transition: all 0.2s ease 0s; }
+
+.checkbox1[type="checkbox"]:checked ~ .chek_off {
+  background-color: #2cb0b4;
+  border: 1px #2cb0b4 solid; }
+  .checkbox1[type="checkbox"]:checked ~ .chek_off span {
+    right: 1px;
+    transition: all 0.2s ease 0s; }
 
 /* menu */
 .menu {
@@ -475,6 +555,17 @@ h2 {
   display: block; }
 
 /* /menu */
+@media (max-width: 600px) {
+  .table_stat {
+    display: table;
+    width: 100%; }
+    .table_stat ul {
+      display: table-row; }
+    .table_stat li {
+      display: block; }
+
+  .formstat {
+    width: 100%; } }
 @media (max-height: 455px) {
   .foot1 {
     position: absolute; } }

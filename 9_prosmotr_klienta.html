@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+       
+
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }
+    </style>
+        
+	</head>
+
+<body>
+
+<!-- Modal - protivopokaz -->
+
+<div id="protivopokaz" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Добавление противопоказания</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+        <div class="formscont">
+            <input type="text" class="form-control form1" placeholder="Противопоказание">
+                </div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn btn-success" style="float:left;">Добавить</a><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - protivopokaz -->
+
+<!-- Modal - Заметки -->
+
+<div id="zametki" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Добавление заметки</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+        <div class="formscont">
+            <input type="text" class="form-control form1" placeholder="Заметка">
+                </div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn btn-success" style="float:left;">Добавить</a><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - Заметки -->
+
+
+<!-- Modal - naznachenie -->
+
+<div id="modal_naznachenie" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Добавление назначения</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+        <div class="formscont">
+            <input type="text" class="form-control form1" placeholder="Назначение">
+                </div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn btn-success" style="float:left;">Добавить</a><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - naznachenie -->
+
+
+<!-- Modal - procedura -->
+
+<div id="modal_procedura" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h4 class="modal-title">Добавление процедуры</h4>
+
+      </div>
+      <div class="modal-body">
+
+        <!-- Modal content-->
+
+        <div class="formscont">
+             <div class="form-group">
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control form1" placeholder="Дата" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+         <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker2').datetimepicker({
+                    locale: 'ru',
+                    format: 'DD.MM.YYYY'
+                });
+            });
+        </script>
+            <input type="text" class="form-control form1" style="margin-top:10px;" placeholder="Процедура">
+            <input type="text" class="form-control form1" style="margin-top:10px;" placeholder="Доход">
+            <input type="text" class="form-control form1" style="margin-top:10px;" placeholder="Расход">
+                </div>
+
+        <!-- /Modal content-->
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn btn-success" style="float:left;">Добавить</a><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- /Modal - procedura -->
+
+
+    <nav id="menu" class="menu">
+      <a href="https://github.com/mango/slideout" target="_blank">
+        <header class="menu-header">
+          <span class="menu-header-title">Tests</span>
+        </header>
+      </a>
+
+      <section class="menu-section">
+        <h3 class="menu-section-title">Docs</h3>
+        <ul class="menu-section-list">
+          <li><a href="https://github.com/mango/slideout#installation" target="_blank">Installation</a></li>
+          <li><a href="https://github.com/mango/slideout#usage" target="_blank">Usage</a></li>
+          <li><a href="https://github.com/mango/slideout#api" target="_blank">API</a></li>
+          <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">npm-scripts</a></li>
+        </ul>
+      </section>
+
+    </nav>
+
+    <main id="panel" class="panel" style="position: fixed; margin:0;left: 0;top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;">
+     
+    
+        <div class="head">
+      
+        <div class="headcont"><a href="#" class="logo"><img src="css/img/logo.png" /></a><div class="head_tit">Просмотр клиента</div></div><button class="btn-hamburger js-slideout-toggle"></button>
+            </div>
+
+    <div class="allcont">
+
+        <div class="client_card">
+
+            <ul>
+                <li style="text-align:center; padding-top: 10px;"><img src="css/img/foto1.jpg" /><div class="table1_date" style="text-align:center;">04.04.2016, 12:45</div></li>
+                <li>
+                    
+                    <div class="cc2">
+                        <ul>
+                            <li>
+                    <div class="fio2">ФИО:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">Шарапова Варвара Васильева</div>
+                                </li>
+                            </ul>
+                        <ul>
+                            <li>
+                    <div class="fio2">Пол:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">женский</div>
+                                </li>
+                            </ul>
+                        <ul>
+                            <li>
+                    <div class="fio2">Возраст:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">32 года</div>
+                                </li>
+                            </ul>
+                        <ul>
+                            <li>
+                    <div class="fio2">Телефон:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">+7(000) 00-00-000</div>
+                                </li>
+                            </ul>
+                        <ul>
+                            <li>
+                    <div class="fio2">Почта:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">Sharapova@mail.ru</div>
+                                </li>
+                            </ul>
+                        <ul>
+                            <li>
+                    <div class="fio2">Соц. сети:</div>
+                                </li>
+                            <li>
+                    <div class="table1_fio">Шарапова</div>
+                                </li>
+                            </ul>
+                       
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+
+
+        <br>
+
+        <div class="content">
+
+      
+
+        <br>
+
+        <div style="background-color:#eff4f7; text-align:center; padding: 10px; font-size:24px; color: #666666;">16:30:45</div>
+
+            <div class="table_cle" style="width:100%;">
+                <ul>
+                    <li>
+                        <a href="" class="btn bottom1" style="margin: 0; width:100%; display:block;"><span style="display:block; width:100%; height:22px; background:url('css/img/ic_vid_white.png') center no-repeat"></span></a>
+                    </li><li>
+                        <a href="" class="btn bottom1" style="margin: 0; width:100%; display:block;"><span style="display:block; width:100%; height:22px; background:url('css/img/ic_pic_white.png') center no-repeat"></span></a>
+                         </li>
+                </ul>
+            </div>
+
+        <br>
+
+            <div class="formscont">
+
+                <div class="table_cle" style="width:100%;">
+                    <ul>
+                        <li style="padding-right:3px;"><input type="text" class="form-control form1 marbot1" placeholder="Приход" ></li><li style="padding-left:4px;"><input type="text" class="form-control form1 marbot1" placeholder="Расход" ></li>
+                        </ul>
+                    </div>
+
+                <input type="text" class="form-control form1 marbot1" placeholder="Заметка">
+
+                <div style="text-align:left; margin: 25px 0 0 0;">
+                    <a href="" class="btn bottom1" style="width:100%;">Завершить</a>
+
+                </div>
+
+              
+            </div>
+
+        </div>
+
+           </div>
+
+    </main>
+
+    <script src="js/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+    
+</body>
+
+</html>

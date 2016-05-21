@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+       
+
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }
+    </style>
+        
+	</head>
+
+<body>
+
+    <nav id="menu" class="menu">
+      <a href="https://github.com/mango/slideout" target="_blank">
+        <header class="menu-header">
+          <span class="menu-header-title">Tests</span>
+        </header>
+      </a>
+
+      <section class="menu-section">
+        <h3 class="menu-section-title">Docs</h3>
+        <ul class="menu-section-list">
+          <li><a href="https://github.com/mango/slideout#installation" target="_blank">Installation</a></li>
+          <li><a href="https://github.com/mango/slideout#usage" target="_blank">Usage</a></li>
+          <li><a href="https://github.com/mango/slideout#api" target="_blank">API</a></li>
+          <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">npm-scripts</a></li>
+        </ul>
+      </section>
+
+    </nav>
+
+    <main id="panel" class="panel" style="position: fixed; margin:0;left: 0;top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;">
+     
+    
+        <div class="head">
+      
+        <div class="headcont"><a href="#" class="logo"><img src="css/img/logo.png" /></a><div class="head_tit">Статистика</div></div><button class="btn-hamburger js-slideout-toggle"></button>
+            </div>
+
+    <div class="allcont">
+
+        <div class="content">
+            
+            <div class="formscont">
+
+                <div class="table_stat">
+                    <ul>
+                <li>
+                    
+                    <div class="form-group">
+                <div class='input-group date formstat' id='date_stat1'>
+                    <input type='text' class="form-control form1" placeholder="Дата" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+                    <script type="text/javascript">
+            $(function () {
+                $('#date_stat1').datetimepicker({
+                    locale: 'ru',
+                    format: 'DD.MM.YYYY'
+                });
+            });
+        </script>
+         
+                </li>
+                        <li>
+
+                  <div class="form-group">
+                            <div class='input-group date formstat' id='date_stat2'>
+                    <input type='text' class="form-control form1" placeholder="Дата" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+               </div>
+           <script type="text/javascript">
+            $(function () {
+                $('#date_stat2').datetimepicker({
+                    locale: 'ru',
+                    format: 'DD.MM.YYYY'
+                });
+            });
+        </script>
+
+                        </li>
+                        </ul>
+                    </div>
+
+
+                <select class="form-control form1 marbot1">
+    <option selected>По клиенту</option>
+    <option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+   </select>
+
+                <select class="form-control form1">
+    <option selected>Процедуры</option>
+    <option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+   </select>
+
+                
+
+                
+                
+                <div class="table_cle" style="width:100%; padding:10px;">
+                    <ul>
+                <li style="text-align:left;"><span class="fio2">Затраты</span></li><li style="text-align:right; width:1px;"><input type="checkbox" id="chek1" class="checkbox1"><label class="chek_on" for="chek1"><span></span></label></li>
+                        </ul>
+                    </div>
+
+            </div></div>
+
+        <br>
+
+        <div class="table2">
+            <ul>
+                <li class="table2_head" style="text-align:center;">Дата</li><li class="table2_head" style="text-align:center;">Приход</li><li class="table2_head" style="text-align:center;">Расход</li>
+            </ul>
+            <ul>
+                <li><div class="table2_t1" style="text-align:center;">11.04.2016</div></li><li><div class="table2_t1" style="text-align:center;">15000</div></li><li><div class="table2_t1" style="text-align:center;">2000</div></li>
+            </ul>
+            <ul>
+                <li><div class="table2_t1" style="text-align:center;">11.04.2016</div></li><li><div class="table2_t1" style="text-align:center;">15000</div></li><li><div class="table2_t1" style="text-align:center;">2000</div></li>
+            </ul>
+            <ul>
+                <li><div class="table2_t1" style="text-align:center;">11.04.2016</div></li><li><div class="table2_t1" style="text-align:center;">15000</div></li><li><div class="table2_t1" style="text-align:center;">2000</div></li>
+            </ul>
+            <ul>
+                <li><div class="table2_t1" style="text-align:center;">11.04.2016</div></li><li><div class="table2_t1" style="text-align:center;">15000</div></li><li><div class="table2_t1" style="text-align:center;">2000</div></li>
+            </ul>
+            <ul>
+                <li><div class="table2_t1" style="text-align:center;">11.04.2016</div></li><li><div class="table2_t1" style="text-align:center;">15000</div></li><li><div class="table2_t1" style="text-align:center;">2000</div></li>
+            </ul>
+        </div>
+
+    </div>
+           
+
+    </main>
+
+
+
+    <script src="js/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+    
+</body>
+
+</html>

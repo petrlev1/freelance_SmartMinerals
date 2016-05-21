@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+       
+
+    <style>
+      .slideout-menu { left: auto; }
+      .btn-hamburger { left: auto; right: 12px;}
+      .box { height: 1500px; }
+    </style>
+        
+	</head>
+
+<body>
+
+    <nav id="menu" class="menu">
+      <a href="https://github.com/mango/slideout" target="_blank">
+        <header class="menu-header">
+          <span class="menu-header-title">Tests</span>
+        </header>
+      </a>
+
+      <section class="menu-section">
+        <h3 class="menu-section-title">Docs</h3>
+        <ul class="menu-section-list">
+          <li><a href="https://github.com/mango/slideout#installation" target="_blank">Installation</a></li>
+          <li><a href="https://github.com/mango/slideout#usage" target="_blank">Usage</a></li>
+          <li><a href="https://github.com/mango/slideout#api" target="_blank">API</a></li>
+          <li><a href="https://github.com/mango/slideout#npm-scripts" target="_blank">npm-scripts</a></li>
+        </ul>
+      </section>
+
+    </nav>
+
+    <main id="panel" class="panel" style="position: fixed; margin:0;left: 0;top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;">
+     
+    
+        <div class="head">
+      
+        <div class="headcont"><a href="#" class="logo"><img src="css/img/logo.png" /></a><div class="head_tit">Запись</div></div><button class="btn-hamburger js-slideout-toggle"></button>
+            </div>
+
+    <div class="allcont">
+
+        <div class="content">
+            
+            <div class="formscont">
+
+                <input type="text" class="form-control form1 marbot1" placeholder="ФИО" >
+
+                <div class="table_cle" style="width:100%;">
+                    <ul>
+                        <li style="padding-right:3px;"><input type="text" class="form-control form1 marbot1" placeholder="Пол" ></li><li style="padding-left:4px;"><input type="text" class="form-control form1 marbot1" placeholder="Возраст" ></li>
+                        </ul>
+                    </div>
+
+                <input type="text" class="form-control form1 marbot1" placeholder="Телефон">
+
+                <div style="text-align:left; margin: 15px 0;"><input type="file" id="openfile" class="inputfile" /><label for="openfile" class="btn bottom1" style="width:100%;">Загрузить ваше фото</label></div>
+
+                <input type="text" class="form-control form1 marbot1" placeholder="Адрес">
+
+                <input type="text" class="form-control form1 marbot1" placeholder="Откуда узнали">
+
+                <input type="text" class="form-control form1 marbot1" placeholder="Что хочет клиент">
+
+                <div class="table_cle" style="width:100%;">
+                    <ul>
+                    <li style="width:60%;"><input type="text" class="form-control form1 marbot1" placeholder="Показания"></li><li style="text-align:left;"><span class="ic_voskl" style="margin-bottom:9px; margin-left:10%;"></span></li><li style="width:1px; padding-right:3px;"><input type="checkbox" id="chek1" class="checkbox1"><label class="chek_on" for="chek1"><span></span></label></li>
+                                       </ul>
+                    <ul>
+                    <li style="width:60%;"><input type="text" class="form-control form1 marbot1" placeholder="Противопоказания"></li><li style="text-align:left;"><span class="ic_voskl" style="margin-bottom:9px; margin-left:10%;"></span></li><li style="width:1px; padding-right:3px;"><input type="checkbox" id="chek2" class="checkbox1"><label class="chek_on" for="chek2"><span></span></label></li>
+                                       </ul>
+                    <ul>
+                    <li style="width:60%;"><input type="text" class="form-control form1 marbot1" placeholder="Назначения"></li><li style="text-align:left;"><span class="ic_voskl" style="margin-bottom:9px; margin-left:10%;"></span></li><li style="width:1px; padding-right:3px;"><input type="checkbox" id="chek3" class="checkbox1"><label class="chek_off" for="chek3"><span></span></label></li>
+                                       </ul>
+
+                </div>
+            </div></div>
+<br>
+
+    </div>
+           
+
+    </main>
+
+
+
+    <script src="js/slideout.js"></script>
+    <script>
+      window.onload = function() {
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'side': 'right'
+        });
+
+        document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+          slideout.toggle();
+        });
+
+        document.querySelector('.menu').addEventListener('click', function(eve) {
+          if (eve.target.nodeName === 'A') { slideout.close(); }
+        });
+      };
+    </script>
+    
+</body>
+
+</html>
