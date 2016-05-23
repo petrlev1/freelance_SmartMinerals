@@ -118,12 +118,16 @@ h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
 .cal_body {display: table; width: 100%; border-collapse: collapse; border-top: 2px #2cb0b4 solid;
     ul{display:table-row; }
     li{display:table-cell; vertical-align: middle; border: 1px #c4c4c4 solid; width: 14%;}}
+
 .cal_body1 { color: #fff; font-size: 14px; background-color: #8d6f4b;}
+
 .cal_body2 { font-size: 14px; color: #666666; position: relative;
-    a{ position: relative; display: block; width: 21px; height: 21px; left: 0; right: 0; margin: 2px auto;}}
+    a{ position: relative; display: block; width: 21px; height: 21px; left: 0; right: 0; margin: 2px auto;
+        &:focus {background-color: #2cb0b4; border-radius: 50% / 50%; color: #fff;}}}
+
 .cal_body3 { font-size: 10px; color: #010101; line-height: 9px; padding: 1px 0;}
 
-.cal_active { background-color: #2cb0b4; border-radius: 50% / 50%;}
+.cal_active { background-color: #2cb0b4; border-radius: 50% / 50%; color: #fff;}
 
 .date1 { font-size: 16px; color: #fff; background-color: #2cb0b4; padding: 7px;}
 
@@ -187,14 +191,24 @@ h2 {  text-align: center; font-size: 18px; color: #8d6f4b; }
 .formstat {width: 98%;}
 
 
-.ic_voskl { display: block; width: 19px; height: 19px; background: url(img/ic_voskl.png) no-repeat;}
+.ic_voskl { position: relative; display: block; width: 19px; height: 19px; background: url(img/ic_voskl.png) no-repeat;
+&:focus .p_info {display: block;}
+     &:focus .modal_rectangle2 {display: block;}}
+
+
+.p_info { position: absolute; width: 244px; background-color: #2cb0b4; padding: 5px 10px; color: #fff; text-align: left; top: -65px; right: -75px; display: none;}
+
+.modal_rectangle2 { display: none; position: absolute; top: -16px; left: 0; right: 0; margin: auto; width: 14px; height: 16px; background: url(img/modal_rectangle.png) no-repeat;}
 
 #openfile {display: none;}
 
 
 .table_zapis { display: table; border-collapse: collapse; width: 100%;
     ul{display:table-row; }
-    li{display:table-cell; vertical-align: middle; text-align: center; border: 1px #c4c4c4 solid; padding: 3px 3px; background-color: #fff;}
+    li{display:table-cell; vertical-align: middle; text-align: center; border: 1px #c4c4c4 solid; padding: 3px 3px; background-color: #fff;
+        a{ color:#666666;
+            &:focus {color: #c4c4c4;}}}
+    .table_zapis_act {color: #c4c4c4;}
 }
 
 

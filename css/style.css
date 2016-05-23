@@ -296,6 +296,10 @@ h2 {
     left: 0;
     right: 0;
     margin: 2px auto; }
+    .cal_body2 a:focus {
+      background-color: #2cb0b4;
+      border-radius: 50% / 50%;
+      color: #fff; }
 
 .cal_body3 {
   font-size: 10px;
@@ -305,7 +309,8 @@ h2 {
 
 .cal_active {
   background-color: #2cb0b4;
-  border-radius: 50% / 50%; }
+  border-radius: 50% / 50%;
+  color: #fff; }
 
 .date1 {
   font-size: 16px;
@@ -437,10 +442,37 @@ h2 {
   width: 98%; }
 
 .ic_voskl {
+  position: relative;
   display: block;
   width: 19px;
   height: 19px;
   background: url(img/ic_voskl.png) no-repeat; }
+  .ic_voskl:focus .p_info {
+    display: block; }
+  .ic_voskl:focus .modal_rectangle2 {
+    display: block; }
+
+.p_info {
+  position: absolute;
+  width: 244px;
+  background-color: #2cb0b4;
+  padding: 5px 10px;
+  color: #fff;
+  text-align: left;
+  top: -65px;
+  right: -75px;
+  display: none; }
+
+.modal_rectangle2 {
+  display: none;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 14px;
+  height: 16px;
+  background: url(img/modal_rectangle.png) no-repeat; }
 
 #openfile {
   display: none; }
@@ -458,6 +490,12 @@ h2 {
     border: 1px #c4c4c4 solid;
     padding: 3px 3px;
     background-color: #fff; }
+    .table_zapis li a {
+      color: #666666; }
+      .table_zapis li a:focus {
+        color: #c4c4c4; }
+  .table_zapis .table_zapis_act {
+    color: #c4c4c4; }
 
 .chek_on, .chek_off {
   position: relative;
